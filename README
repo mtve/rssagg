@@ -1,0 +1,16 @@
+Simple RSS aggregator, minimum CPAN dependencies, single html page of output
+
+Inputs:
+	rss.list - text file with feeds urls, rss/rdf/atom are supported
+
+Outputs:
+	rss.data - binary file with last states of feed (Last-modified, Etag
+            and hashes of articles seen)
+	index.html - fresh digest
+	1.html .. 9.html - rotated previous digests
+
+How to run:
+	./rssagg.pl <DIRECTORY>
+
+When started from terminal it prints a dot after fetching of each url,
+otherwise it is silent (for cronjob).
